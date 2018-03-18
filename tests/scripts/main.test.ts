@@ -1,0 +1,11 @@
+import "jest";
+
+if (typeof jasmine !== 'undefined') jasmine.DEFAULT_TIMEOUT_INTERVAL = 2000;
+
+// help: https://facebook.github.io/jest/docs/expect.html
+
+describe('Internal module test', () => {
+	it('should do this', () => {
+		expect(true).toBe(true);
+	});
+});
