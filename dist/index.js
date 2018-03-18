@@ -85,9 +85,10 @@ return /******/ (function(modules) { // webpackBootstrap
 Object.defineProperty(exports, "__esModule", { value: true });
 var DynaLocalStorage = /** @class */ (function () {
     function DynaLocalStorage(namespace) {
+        if (namespace === void 0) { namespace = "dyna-local-storage"; }
         this.namespace = namespace;
     }
-    DynaLocalStorage.prototype.getFullStorageKey = function (key) {
+    DynaLocalStorage.prototype._getFullStorageKey = function (key) {
         return this.namespace + "/" + key;
     };
     DynaLocalStorage.prototype.setItem = function (key, data) {
