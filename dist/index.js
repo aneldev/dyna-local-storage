@@ -73,11 +73,57 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var DynaLocalStorage_1 = __webpack_require__(2);
+exports.DynaLocalStorage = DynaLocalStorage_1.DynaLocalStorage;
+var DynaLocalSrorageData_1 = __webpack_require__(1);
+exports.DynaLocalStorageData = DynaLocalSrorageData_1.DynaLocalStorageData;
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var DynaLocalStorageData = /** @class */ (function () {
+    function DynaLocalStorageData(localStorageKey, defaultData) {
+        if (defaultData === void 0) { defaultData = {}; }
+        this.localStorageKey = localStorageKey;
+        this.load();
+        if (!this.data)
+            this.data = JSON.parse(JSON.stringify(defaultData));
+    }
+    DynaLocalStorageData.prototype.load = function () {
+        this.data = null;
+        var storedMemory = localStorage.getItem(this.localStorageKey);
+        try {
+            this.data = JSON.parse(storedMemory);
+        }
+        catch (error) {
+            // swallow the error, the default values will be applied
+        }
+    };
+    DynaLocalStorageData.prototype.save = function () {
+        localStorage.setItem(this.localStorageKey, JSON.stringify(this.data));
+    };
+    return DynaLocalStorageData;
+}());
+exports.DynaLocalStorageData = DynaLocalStorageData;
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -115,7 +161,7 @@ exports.DynaLocalStorage = DynaLocalStorage;
 
 
 /***/ }),
-/* 1 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(0);
