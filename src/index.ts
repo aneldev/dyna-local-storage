@@ -1,7 +1,7 @@
 export {
-	DynaLocalStorage,
-} from "./DynaLocalStorage";
+  DynaLocalStorage,
+} from "./DynaLocalStorage";
 
 export {
-	DynaLocalStorageData,
+  DynaLocalStorageData,
 } from "./DynaLocalSrorageData";

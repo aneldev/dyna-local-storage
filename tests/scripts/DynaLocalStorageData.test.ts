@@ -1,10 +1,8 @@
-import "jest";
+jest.setTimeout(4000);
 
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 4000;
+import {DynaLocalStorageData} from "../../src";
 
-import {DynaLocalStorageData} from "../../src"
-
-// help: https://facebook.github.io/jest/docs/expect.html
+// Help: https://facebook.github.io/jest/docs/expect.html
 
 interface IUser {
   name: string;

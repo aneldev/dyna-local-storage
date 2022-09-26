@@ -1,10 +1,8 @@
-import "jest";
+jest.setTimeout(4000);
 
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 4000;
+import {DynaLocalStorage} from "../../src";
 
-import {DynaLocalStorage} from "../../src"
-
-// help: https://facebook.github.io/jest/docs/expect.html
+// Help: https://facebook.github.io/jest/docs/expect.html
 
 describe('Internal module test', () => {
   it('DynaLocalStorage', () => {

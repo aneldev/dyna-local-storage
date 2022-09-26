@@ -14,7 +14,7 @@ var DynaLocalStorageData = /** @class */ (function () {
             this.data = JSON.parse(storedMemory);
         }
         catch (error) {
-            // swallow the error, the default values will be applied
+            // Swallow the error, the default values will be applied
         }
     };
     DynaLocalStorageData.prototype.save = function () {

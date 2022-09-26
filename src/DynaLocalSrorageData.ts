@@ -15,8 +15,9 @@ export class DynaLocalStorageData<TData> {
     if (storedMemory === null) return;
     try {
       this.data = JSON.parse(storedMemory) as TData;
-    } catch (error) {
-      // swallow the error, the default values will be applied
+    }
+    catch (error) {
+      // Swallow the error, the default values will be applied
     }
   }
 
